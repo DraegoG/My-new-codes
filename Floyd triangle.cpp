@@ -9,23 +9,12 @@ int main()
     {
         if(i%2==0)
         {
-            for(j=1; j<=i; j++)
-            {
-                if(j%2==0)
-                    cout<<"1";
-                else
-                    cout<<"0";
-            }
+            for(j=1; j<=i/2; j++)  cout<<"01";
         }
         else
         {
-            for(k=1; k<=i; k++)
-            {
-                if(k%2==0)
-                    cout<<"0";
-                else
-                    cout<<"1";
-            }
+            cout<<"1";
+            for(k=1; k<=i/2; k++)  cout<<"01";
         }
         cout<<endl;
     }
