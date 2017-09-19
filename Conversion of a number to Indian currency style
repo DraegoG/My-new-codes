@@ -1,0 +1,31 @@
+// Program to convert any number into indian currency style
+#include <iostream>
+#include <string>
+#include<algorithm>
+using namespace std;
+
+int convert(long int c)
+{
+    string cur=to_string(c); //conversion of a number to a string
+    int n=cur.length();
+    reverse(cur.begin(),cur.end()); //reversing the string
+    for(int i=1;i<n;i++)
+    {
+        if(i%3==0) 
+        {
+            cur.insert(i,1,',');
+            n++;
+        }
+    }
+    reverse(cur.begin(),cur.end());
+    cout<<endl<<"Rs. "<<cur<<".00";
+    return 1;
+}
+
+
+int main()
+{
+    long currency;
+    cin>>currency;
+    convert(currency);
+}
