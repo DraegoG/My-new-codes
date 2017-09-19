@@ -1,0 +1,13 @@
+#include<iostream>
+#include<string>
+using namespaec std;
+int main()
+{
+//No. to a string
+int n=123456;
+string s=to_string(n);
+
+//String to a number
+string s="124562150";
+int n=stoi(s,nullptr);
+}
