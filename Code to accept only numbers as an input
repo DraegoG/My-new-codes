@@ -5,7 +5,7 @@ int main(void)
 	char str[128];
 
 	printf("Enter a string with spaces: ");
-	scanf("%[0123456789]s", str);
+	scanf("%[0123456789]s", &str); //or scanf("%[0-9]s",&str);    //or scanf("%[a-z]s",&str);
 
 	printf("You entered: %s\n", str);
 
