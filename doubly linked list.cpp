@@ -68,7 +68,7 @@ int print()
 //Printing linked in reverse
 int rev(node *ptr)
 {
-    int a=x-1;
+    int a=x-1;  //One less than the size of the linked list
     while(a)
     {
         ptr=ptr->next;
