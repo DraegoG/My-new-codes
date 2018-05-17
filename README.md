@@ -1,2 +1,2 @@
 # My-new-codes
-Hi guyz these are my practice codes. I you find any improvement plz do suggest me.
+Hi guyz these are my practice codes. If you feel any improvement plz do suggest me.
