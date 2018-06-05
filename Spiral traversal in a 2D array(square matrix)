@@ -1,0 +1,59 @@
+#include <iostream> 
+#include<stdio.h>
+using namespace std;
+
+int main() {
+    int n,r=0,c=0,count1=0;
+    cin>>n;
+    int arr[n][n];
+    for(int i=0;i<n;i++)
+    {
+        for(int j=0;j<n;j++)
+        {
+            arr[i][j]=++count1;
+            printf("%-3d",arr[i][j]);
+        }
+        cout<<'\n';
+    }
+    
+count1=0;
+int up=-1, down=n, right=n, left=-1, i=0, j=0;
+   while(count1<=n*n)
+   {
+       //right traverse
+       for( ; j<right; j++)
+       {
+           printf("%-3d",arr[i][j]);
+           count1++;
+       }
+       if(count1>=n*n) break;
+       up++;  i++; j--;
+       
+       //down traverse
+       for( ; i<down; i++)
+       {
+           printf("%-3d",arr[i][j]);
+           count1++;
+       }
+       if(count1>=n*n) break;
+       right--; j--; i--;
+       
+       //left traverse
+       for( ; j>left; j--)
+       {
+           printf("%-3d",arr[i][j]);
+           count1++;
+       }
+       if(count1>=n*n) break;
+       down--; i--; j++;
+       
+       //up traverse
+       for( ; i>up; i--)
+       {
+            printf("%-3d",arr[i][j]);    
+            count1++;
+       }
+       if(count1>=n*n) break;
+       left++; j++; i++;
+   }
+}
